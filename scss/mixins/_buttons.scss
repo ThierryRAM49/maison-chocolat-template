@@ -1,0 +1,8 @@
+@mixin btn_rose {
+    background-color: hwb(323 6% 5%);
+    color: hwb(0 92% 4%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+@use '../mixins/buttons';
+
+.btn_rose {
+    @include buttons.btn_rose;
+    margin-top: 20px;
+    font-size: 0.5em;
+}
+
+.btn_rose1, .btn_rose2 {
+    @include buttons.btn_rose;
+}

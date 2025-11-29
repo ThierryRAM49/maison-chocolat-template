@@ -1,0 +1,142 @@
+// Hero
+.hero {
+    background: fixed url('../img/main.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ece0e0;
+    font-size: 2em;
+    align-items: center;
+}
+
+.btn_rose{
+    background-color: hwb(323 6% 5%);
+    color: hwb(0 92% 4%);
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.5em;
+}
+
+// Items
+.items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    text-align: center;
+}
+
+.charte-qualité, .charte-ecologique, .charte-équitable {
+    max-width: 350px;
+}
+
+.items i {
+    font-size: 2.5em;
+    color: hwb(323 6% 5%);
+    margin-bottom: 15px;
+}
+
+// Club-Actus
+.club-Actus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    background-color: rgb(223, 238, 239);
+}
+
+.club, .actus {
+    max-width: 350px;
+}
+
+.club, .actus-item {
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.club-Actus img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.decript1, .decript2 {
+    padding: 20px;
+}
+
+.decript1 h2, .decript2 h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.decript1 p, .decript2 p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.btn_rose1, .btn_rose2 {
+    background-color: hwb(323 6% 5%);
+    color: hwb(0 92% 4%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+// Contact Form
+.contact-form {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: hwb(323 6% 5%);
+    color: hwb(0 92% 4%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

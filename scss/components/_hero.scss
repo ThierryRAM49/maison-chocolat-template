@@ -1,0 +1,11 @@
+.hero {
+    background: fixed url('../img/main.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ece0e0;
+    font-size: 2em;
+    align-items: center;
+}

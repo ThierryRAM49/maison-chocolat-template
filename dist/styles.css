@@ -1,0 +1,288 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "RobotoVariable", sans-serif;
+  list-style: none;
+}
+
+.nav-container {
+  background-color: hsl(30, 14.2857142857%, 96.5%);
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-between; /* Aligne le logo à gauche et la nav à droite */
+  align-items: center; /* Centre verticalement les éléments */
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box; /* S'assure que le padding est inclus dans la largeur */
+}
+
+.nav-links ul {
+  list-style: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: hsl(0, 81.8181818182%, 5.5%);
+}
+
+.slog {
+  display: flex;
+  position: relative;
+  text-align: center; /* Gardons le texte centré */
+}
+
+/* Styles spécifiques pour le logo dans le header */
+.logo b {
+  color: hsl(240, 7.6923076923%, 6.5%);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em; /* La taille de la police du logo est déjà grande */
+}
+
+.logo .logo-part2 {
+  color: lab(57.13% 89.94 -34.35);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em; /* La taille de la police du logo est déjà grande */
+}
+
+.hero {
+  background: fixed url("../img/main.jpg") no-repeat center center;
+  object-fit: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Empiler les éléments verticalement */
+  justify-content: center;
+  color: #ece0e0;
+  font-size: 2em;
+  font-family: "RobotoVariable", sans-serif;
+  align-items: center;
+}
+
+.btn_rose {
+  background-color: hsl(323, 89.898989899%, 50.5%);
+  color: hsl(0, 33.3333333333%, 94%);
+  padding: 5px 5px;
+  margin-top: 20px; /* Ajoute un espace au-dessus du bouton */
+  border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em; /* Le bouton hérite du font-size de .hero, réduisons-le */
+}
+
+.btn_rose1 {
+  background-color: hsl(323, 89.898989899%, 50.5%);
+  color: hsl(0, 33.3333333333%, 94%);
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.btn_rose:hover {
+  transition: 0.2ms;
+}
+
+.sep {
+  color: rgb(90, 225, 240);
+}
+
+/* --- Styles pour les sections principales (Mobile First) --- */
+.items, .club-Actus {
+  display: flex;
+  flex-direction: column; /* Empile les éléments verticalement sur mobile */
+  align-items: center;
+  padding: 20px;
+  gap: 30px; /* Espace entre les éléments empilés */
+  text-align: center;
+}
+
+.charte-qualité, .charte-ecologique, .charte-équitable, .club, .actus {
+  max-width: 350px; /* Limite la largeur des blocs sur mobile */
+}
+
+/* Ajout de la position relative pour permettre la superposition des enfants */
+.club, .actus-item {
+  position: relative;
+  overflow: hidden; /* Pour éviter que le contenu déborde */
+}
+
+.club {
+  width: 400px;
+  height: 200px;
+  font-family: "RobotoVariable", sans-serif;
+}
+
+.actus-item {
+  width: 400px;
+  height: 200px;
+  margin: auto;
+}
+
+.decript2 {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 40%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center; /* On centre le texte à l'intérieur du bloc */
+  font-size: 0.6em;
+}
+
+.decript1 {
+  position: absolute;
+  bottom: 0px;
+  left: 1%;
+  width: 40%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center; /* On centre le texte à l'intérieur du bloc */
+  font-size: 0.6em;
+}
+
+.club img {
+  width: 98%;
+  height: 219px;
+  object-fit: cover;
+  border-radius: 10px 10px 10px 10px;
+}
+
+/* --- Responsive pour tablettes et plus (600px et plus) --- */
+@media (min-width: 600px) {
+  .items {
+    flex-direction: row; /* Aligne les éléments horizontalement */
+    justify-content: center;
+    align-items: flex-start; /* Aligne le haut des blocs */
+    gap: 20px;
+  }
+  .club-Actus {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: grey;
+  }
+}
+/* --- Responsive pour le menu (900px et moins) --- */
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column; /* Empile le logo et la navigation verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    padding-bottom: 10px; /* Ajoute un peu d'espace en bas */
+  }
+  .nav-links ul {
+    /* Les liens restent en ligne par défaut (flex-direction: row) */
+    padding-top: 15px; /* Ajoute un espace entre le logo et le menu */
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne si pas assez de place */
+    justify-content: center; /* Centre les liens quand ils passent à la ligne */
+  }
+  .hero {
+    /* Remonte le contenu pour compenser le header plus grand */
+    padding-top: 120px;
+  }
+}
+.contact-form {
+  text-align: center;
+  max-width: 800px; /* Un peu plus de place pour les champs en ligne */
+  margin: 40px auto; /* Espace au-dessus et en dessous */
+  padding: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur petits écrans */
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Espace entre les éléments du formulaire */
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Petit espace entre le label et le champ */
+}
+
+.contact-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form button {
+  /* On réutilise le style du bouton rose */
+  background-color: hsl(323, 89.898989899%, 50.5%);
+  color: hsl(0, 33.3333333333%, 94%);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #2c2c2c; /* Fond sombre pour le contraste */
+  color: #f4f4f4;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer h6 {
+  margin: 5px 0 0;
+  font-weight: normal;
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+/* On applique les mêmes styles que le logo du header */
+.logo-footer b {
+  color: hsl(240, 20%, 90%);
+  font-size: 1.5em;
+}
+
+.logo-part2 {
+  color: lab(57.13% 89.94 -34.35);
+  font-size: 1.5em;
+}
+
+/* --- Styles pour les icônes de la section "items" --- */
+.items i {
+  font-size: 2.5em; /* Augmente la taille des icônes */
+  color: hsl(323, 89.898989899%, 50.5%); /* Couleur rose, comme les boutons */
+  margin-bottom: 15px; /* Espace sous l'icône */
+}
+
+.decript1 p, .decript2 p {
+  margin: 0 0 15px 0; /* Espace entre le paragraphe et le bouton */
+  font-size: 1.1em;
+  font-family: "RobotoVariable", sans-serif;
+}
+
+.decript1 h2, .decript2 h2 {
+  font-size: 1.5em;
+  font-family: "RobotoVariable", sans-serif;
+}
+
+.sep1, .sep2 {
+  color: aqua;
+}
+
+/*# sourceMappingURL=styles.css.map */

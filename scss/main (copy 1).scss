@@ -1,0 +1,15 @@
+@use 'base/variables'; // Namespace par défaut est 'variables'
+@use 'base/reset';
+@use 'base/typography';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/grid';
+@use 'components/buttons';
+@use 'components/forms';
+@use 'pages/home';
+
+// Exemple d'utilisation d'une variable dans main.scss
+body {
+  font-family: typography.$font-family; // Si tu déclares $font-family dans _typography.scss
+  background-color: variables.$secondary-color; // Si tu déclares $secondary-color dans _variables.scss
+} 
